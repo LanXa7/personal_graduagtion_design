@@ -1,0 +1,10 @@
+export com.example.model.entity.canteen.Food
+
+input FoodSaveInput{
+    name
+    code
+    price
+    picture
+    description
+    id(stall)
+}

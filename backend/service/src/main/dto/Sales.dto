@@ -1,0 +1,8 @@
+export com.example.model.entity.canteen.Sales
+
+import java.time.LocalDate
+
+SalesHistoryView {
+   number
+   day:LocalDate?
+}

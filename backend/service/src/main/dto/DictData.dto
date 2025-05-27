@@ -1,0 +1,9 @@
+export com.example.model.entity.dict.DictData
+
+DictView{
+    label
+    value
+    flat(type) {
+        code as dictType
+    }
+}

@@ -1,0 +1,15 @@
+export com.example.model.entity.order.Order
+
+OrderPayView{
+    code
+    totalPrice
+    picture
+    orderItems{
+        totalPrice
+        totalNumber
+        food{
+            name
+        }
+    }
+    qrCode:String
+}

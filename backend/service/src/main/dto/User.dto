@@ -1,0 +1,77 @@
+export com.example.model.entity.user.User
+
+import jakarta.validation.constraints.Email
+import org.hibernate.validator.constraints.Length
+import jakarta.validation.constraints.Pattern
+
+input UserLoginInput{
+    text:String
+    @Length(min = 6, max = 20)
+    password
+}
+
+UserLoginView{
+    username
+    phone
+    email
+    token:String
+    expire:Long
+    roles:List<String>
+    permissions:List<String>
+}
+
+input UserRegisterInput{
+    @Length(min = 5, max = 20)
+    username
+    @Email
+    email
+    @Pattern(regexp = "^1[3-9]\\d{9}$")
+    phone
+    @Length(min = 6, max = 20)
+    password
+    @Length(min = 6, max =6)
+    code:String
+}
+
+input UserResetPasswordInput{
+    @Email
+    email
+    @Length(min = 6, max = 20)
+    password
+    @Length(min = 6, max =6)
+    code:String
+}
+
+input UserUpdateEmailInput{
+    @Email
+    email
+    @Length(min = 6, max =6)
+    code:String
+}
+
+input UserUpdatePasswordInput{
+    @Length(min = 6, max = 20)
+    oldPassword:String
+    @Length(min = 6, max = 20)
+    newPassword:String
+}
+
+UserInfoView{
+    id
+    username
+    email
+    phone
+    createTime
+    avatar
+    roles:List<String>
+}
+
+input UserUpdateRoleInput{
+    id
+    id(roles) as roleIds
+}
+
+input UserAdminResetPasswordInput{
+    @Length(min = 6, max = 20)
+    password
+}

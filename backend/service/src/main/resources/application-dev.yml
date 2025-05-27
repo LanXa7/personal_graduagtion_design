@@ -1,0 +1,30 @@
+alipay:
+    domain: http://14.103.249.113:18085/webhook/alipay/notify
+
+jimmer:
+    client:
+        ts:
+            path: /ts.zip
+        openapi:
+            path: /openapi.yaml
+            ui-path: /openapi.html
+            properties:
+                info:
+                    title: Graduation Design Service
+                    description: Graduation Design Service API
+                    version: 1.0
+                components:
+                    security-schemes:
+                        AuthorizationHeader:
+                            type: apiKey
+                            in: header
+                            name: Authorization
+                securities:
+                    -   AuthorizationHeader: [ ]
+
+
+
+
+
+
+

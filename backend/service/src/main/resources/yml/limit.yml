@@ -1,0 +1,14 @@
+spring:
+  security:
+    jwt:
+      limit:
+        base: 10
+        upgrade: 300
+        frequency: 30
+  web:
+    verify:
+      mail-limit: 60
+    flow:
+      period: 3
+      limit: 100
+      block: 30

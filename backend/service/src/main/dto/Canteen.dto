@@ -1,0 +1,14 @@
+export com.example.model.entity.canteen.Canteen
+
+import jakarta.validation.constraints.Pattern
+import org.hibernate.validator.constraints.Length
+
+input CanteenSaveInput{
+    @Length(max = 20)
+    name
+    @Length(max = 20)
+    directorName
+    @Pattern(regexp = "^[1-9][0-9]{10}$")
+    directorPhone
+    address
+}

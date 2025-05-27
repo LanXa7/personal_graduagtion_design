@@ -1,0 +1,11 @@
+spring:
+  mail:
+    host: smtp.qq.com
+    username: 861190132@qq.com
+    password: vkzlmtlzulmnbcgb
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true # 启用 STARTTLS 加密
