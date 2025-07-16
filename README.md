@@ -1,0 +1,14 @@
+## 个人毕设项目开源
+### 后端技术栈
+* kotlin
+* jimmer
+* spring-statemachine
+* redission
+* okhttp3
+### 后端构建工具
+* gradle
+### 前端技术栈
+* ts
+* alvoa
+* vue3
+* pinia
